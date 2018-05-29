@@ -15,3 +15,5 @@ This Rails app uses the Docker Compose Rails guide [https://docs.docker.com/comp
 - Full rebuild `docker-compose run web bundle install && docker-compose up --build`
 
 The app is avaiable at [http://localhost:3000](http://localhost:3000).
+
+You can run some `bin/rails` commands from outside of the container if you `bundle install` dependencies on your workstation, but if you need to interact with the database you'll have to run the commands in the container with `docker-compose run` (example: `docker-compose run web bin/rails c`).
